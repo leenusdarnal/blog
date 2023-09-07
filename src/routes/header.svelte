@@ -2,7 +2,7 @@
 	import * as config from '$lib/config'
 </script>
 
-<nav class="flex justify-between h-10">
+<nav class="flex justify-between min-h-10">
 	<a href="/" class="text-2xl">
 		<b>{config.title}</b>
 	</a>

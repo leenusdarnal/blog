@@ -14,12 +14,14 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
+		"@tailwindcss/typography": "^0.5.10",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.15",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
+		"mdsvex": "^0.11.0",
 		"postcss": "^8.4.29",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
@@ -36,6 +38,7 @@
 		"@fontsource/manrope": "^5.0.11",
 		"lucide-svelte": "^0.274.0",
 		"open-props": "^1.5.15",
-		"remove": "^0.1.5"
+		"remove": "^0.1.5",
+		"shiki": "^0.14.4"
 	}
 }
