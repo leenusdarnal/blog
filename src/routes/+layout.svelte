@@ -3,17 +3,26 @@
 
 	import Header from './header.svelte'
 	import Footer from './footer.svelte'
-	import PageTransition from './transition.svelte'
+	import { onNavigate } from '$app/navigation'
 
-	export let data
+	onNavigate((navigation) => {
+		// @ts-ignore
+		if (!document.startViewTransition) return
+
+		return new Promise((resolve) => {
+			// @ts-ignore
+			document.startViewTransition(async () => {
+				resolve()
+				await navigation.complete
+			})
+		})
+	})
 </script>
 
 <div class="flex flex-col min-h-screen">
 	<Header />
 	<main>
-		<PageTransition url={data.url}>
-			<slot />
-		</PageTransition>
+		<slot />
 	</main>
 	<Footer />
 </div>
