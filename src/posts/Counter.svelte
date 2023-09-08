@@ -3,4 +3,4 @@
 	const increment = () => (count += 1)
 </script>
 
-<button on:click={increment}>{count}</button>
+<button type="button" on:click={increment}>{count}</button>
