@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme"
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	// prefix: 'tw-',
@@ -40,6 +42,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+			fontFamily:{
+				'sans':["var(--font-sans)",...defaultTheme.fontFamily.sans],
+				'mono':["var(--font-mono)",...defaultTheme.fontFamily.mono]
+			}
 		}
 	},
 	plugins: [require('@tailwindcss/typography')]
