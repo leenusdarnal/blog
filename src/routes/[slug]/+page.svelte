@@ -21,7 +21,7 @@
 			<span class="text-sm bg-slate-200 rounded-md py-0.5 px-0.5">&num;{category}</span>
 		{/each}
 	</div>
-	<div class="prose pros">
+	<div class="prose">
 		<svelte:component this={data.content} />
 	</div>
 </article>
