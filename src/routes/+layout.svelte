@@ -19,7 +19,7 @@
 	})
 </script>
 
-<div class="flex flex-col min-h-screen text-foreground bg-background">
+<div class="text-foreground bg-background flex min-h-screen flex-col">
 	<Header />
 	<main>
 		<slot />
