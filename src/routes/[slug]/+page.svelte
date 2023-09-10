@@ -12,16 +12,18 @@
 
 <article class="p-10">
 	<hgroup>
-		<h1 class="text-4xl mb-3 capitalize">{data.meta.title}</h1>
+		<h1 class="mb-3 text-4xl capitalize">{data.meta.title}</h1>
 		<p class="text-lg">Published at {formatDate(data.meta.date)}</p>
 	</hgroup>
 
-	<div class="flex w-fit h-fit gap-3 my-3">
+	<div class="text-muted my-3 flex h-fit w-fit gap-3">
 		{#each data.meta.categories as category}
-			<span class="text-sm bg-slate-200 rounded-md py-0.5 px-0.5">&num;{category}</span>
+			<span class="text-muted bg-muted-foreground rounded-full px-0.5 py-0.5 text-sm"
+				>&num;{category}</span
+			>
 		{/each}
 	</div>
-	<div class="prose">
+	<div class="prose prose-slate dark:prose-invert">
 		<svelte:component this={data.content} />
 	</div>
 </article>

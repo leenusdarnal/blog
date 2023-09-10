@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -11,10 +11,8 @@
 		<link rel="alternate" type="application/atom+xml" href="/rss.xml" />
 		%sveltekit.head%
 		<script type="module">
-			const theme = localStorage.getItem('color-scheme')
-			theme
-				? document.documentElement.setAttribute('color-scheme', theme)
-				: localStorage.setItem('color-scheme', 'light')
+			const theme = localStorage.getItem('theme')
+			theme ? document.documentElement.classList.add(theme) : localStorage.setItem('theme', 'light')
 		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover">
